@@ -1,30 +1,30 @@
-## Live In Your Style
+# Live In Your Style
 - - -
-### Android App
+## Android App
 Real-Time Video Segmentation and Stylization on Android Devices
 - - -
 
-##### Two Solution:
+### Two Solution:
 - Native: use tflite or pb model to inference image.
 - Cloud: post image to cloud then return inferenced image.
 
-##### Getting Started
+### Getting Started
 1. Download Android Studio
 2. Launch Android Studio
 3. Select "File/Open"
 4. Click LIYS_APP folder
 5. Click *Run/Run 'app'*.
 
-### Demo Script
+## Demo Script
 - - -
-##### 1. camera : get camera frame then inference it.
+### 1. camera : get camera frame then inference it.
 - `camera_person_detect.py`, use deeplab model to segment person and background (pb format model).
 - `camera_person_detect_tflite.py`, use deeplab model to segment person and background (TensorFlow Lite format model).
 - `camera_style_transfer.py`, use StyleTranfer model to stylize camera frame.
 - `camera_combination.py`, use deeplab and StyleTranfer model to segment person and stylize background. 
 - `camera_combination_cloud_api.py`, post camera frame to cloud then get inferenced frame (gRPC). 
 
-##### 2. transform video : transform video with segmentation and stylization
+### 2. transform video : transform video with segmentation and stylization
 - `transform_LIYS_video.py`, Run `python transform_LIYS_video.py` to view all the possible parameters. 
 - **Flags**
     - `-i`:Path to input video.
@@ -43,7 +43,7 @@ python transform_LIYS_video.py
 -w 480 -h 270
 ```
 
-##### 3. web service : restful web service ([Flask]), Real-Time segmentation and stylization.
+### 3. web service : restful web service ([Flask]), Real-Time segmentation and stylization.
 - `rest_web_service.py`, Run `python rest_web_service.py`, connect to http://0.0.0.0:5000/ , call the url you need.
 - REST APIs:
 
@@ -98,10 +98,10 @@ response:{
 }
 ``` 
 
-### Transform Graph and Convert to TFLite (deeplab model)
+## Transform Graph and Convert to TFLite (deeplab model)
 TensorFlow Lite does not support the preprocessing done within the DeepLabv3 model. Preprocessing must be done offline before the images are run.
 - - -
-##### Transform Graph
+### Transform Graph
 remove prepocessing and postprocessing.
 ```
 transform_graph \
@@ -111,7 +111,7 @@ transform_graph \
     --outputs="ArgMax" \
     --transforms='fold_batch_norms fold_old_batch_norms strip_unused_nodes(type=float, shape="1,513,513,3")'
 ```
-##### Transform Graph 2
+### Transform Graph 2
 GPU-accelerated computing.(flatten_atrous_conv)
 ```
 transform_graph \
@@ -121,7 +121,7 @@ transform_graph \
     --outputs="ArgMax" \
     --transforms='fold_constants flatten_atrous_conv remove_device merge_duplicate_nodes fold_batch_norms fold_old_batch_norms strip_unused_nodes(type=float, shape="1,513,513,3")'
 ```
-##### Convert to TFLite
+### Convert to TFLite
 from pb format model convert to tflite formate.
 ```
 tflite_convert \
@@ -135,7 +135,7 @@ tflite_convert \
     --output_format=TFLITE
 ```
 
-### TODOs
+## TODOs
 - - -
 - **App** : 
     - iOS version
@@ -144,7 +144,7 @@ tflite_convert \
     - HLS instead of restful web service.
     - Amazon Kinesis Video Streams
 
-### References
+## References
 - - -
 1. **Segmentation model**: [DeepLab: Deep Labelling for Semantic Image Segmentation]
 2. **Style Transfer model**: [Fast Style Transfer in TensorFlow]
