@@ -1,8 +1,8 @@
 # Live In Your Style
-- - -
+
 ## Android App
 Real-Time Video Segmentation and Stylization on Android Devices
-- - -
+
 
 ### Two Solution:
 - Native: use tflite or pb model to inference image.
@@ -16,7 +16,7 @@ Real-Time Video Segmentation and Stylization on Android Devices
 5. Click *Run/Run 'app'*.
 
 ## Demo Script
-- - -
+
 ### 1. camera : get camera frame then inference it.
 - `camera_person_detect.py`, use deeplab model to segment person and background (pb format model).
 - `camera_person_detect_tflite.py`, use deeplab model to segment person and background (TensorFlow Lite format model).
@@ -100,7 +100,7 @@ response:{
 
 ## Transform Graph and Convert to TFLite (deeplab model)
 TensorFlow Lite does not support the preprocessing done within the DeepLabv3 model. Preprocessing must be done offline before the images are run.
-- - -
+
 ### Transform Graph
 remove prepocessing and postprocessing.
 ```
@@ -136,7 +136,7 @@ tflite_convert \
 ```
 
 ## TODOs
-- - -
+
 - **App** : 
     - iOS version
     - transform StyleTransfer model to tensorflow lite format.
@@ -145,7 +145,7 @@ tflite_convert \
     - Amazon Kinesis Video Streams
 
 ## References
-- - -
+
 1. **Segmentation model**: [DeepLab: Deep Labelling for Semantic Image Segmentation]
 2. **Style Transfer model**: [Fast Style Transfer in TensorFlow]
 3. **Android TensorFlow(pb) Example**: [TensorFlow Android Camera Demo]
