@@ -1,4 +1,5 @@
 # Live In Your Style
+Live In Your Style is for the real-time background replacement and style transfer in live scenario, by using deep learning methods
 
 ## Android App
 Real-Time Video Segmentation and Stylization on Android Devices
