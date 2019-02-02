@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">LIYS</string>
+
+    <string name="btn_camera">Camera View : Native</string>
+    <string name="btn_cloud">Camera View : Cloud</string>
+    <string name="btn_image">LIYS Image</string>
+
+    <!-- Camera View -->
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="btn_start_segmentation">Start Seg</string>
+    <string name="btn_stop_segmentation">Stop Seg</string>
+    <string name="btn_start_style_transfer">Start Sty</string>
+    <string name="btn_stop_style_transfer">Stop Sty</string>
+    <string name="btn_start_liys">Start LIYS</string>
+    <string name="btn_stop_liys">Stop LIYS</string>
+    <string name="img_seg">segmentation image</string>
+    <string name="et_url_hint">input rtmp url</string>
+    <string name="et_ip_addr_hint">input ip address</string>
+
+    <!-- LIYS Image -->
+    <string name="liys_image">LIYS Image</string>
+    <string name="menu_liys_input_orig_image">Input Original Image</string>
+    <string name="menu_liys_set_post_url">Set post url</string>
+    <string name="menu_liys_take_picture">Take Picture</string>
+    <string name="menu_liys_input_style_image">Input Style Image</string>
+
+    <string name="tv_orig_image">Original Image</string>
+    <string name="tv_style_image">Style Image</string>
+    <string name="btn_transform">Run</string>
+
+    <string name="tv_resize_ratio">resize ratio:</string>
+
+    <string-array name="resize_ratio_array">
+        <item>0.1</item>
+        <item>0.2</item>
+        <item>0.3</item>
+        <item>0.4</item>
+        <item>0.5</item>
+        <item>0.6</item>
+        <item>0.7</item>
+        <item>0.8</item>
+        <item>0.9</item>
+        <item>1.0</item>
+    </string-array>
+
+    <string name="title_style_image_dlg">Choose Style Image</string>
+
+    <!-- Cloud API -->
+
+
+</resources>
