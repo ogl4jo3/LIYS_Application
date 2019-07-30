@@ -1,4 +1,4 @@
-# Live In Your Style
+# Live In Your Style  [LIYS model]
 Live In Your Style is for the real-time background replacement and style transfer in live scenario, by using deep learning methods
 
 ## Android App
@@ -161,4 +161,5 @@ tflite_convert \
 [TF Lite Android Image Classifier App Example]: <https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/java/demo>
 [Graph Transform Tool]:<https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/graph_transforms>
 [TensorFlow Lite]:<https://www.tensorflow.org/lite/overview>
+[LIYS model]:<https://github.com/pschang-phy/LIYS>
 
